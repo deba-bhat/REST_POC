@@ -1,0 +1,24 @@
+<application xmlns:soa="http://www.oracle.com/soa/rest" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://wadl.dev.java.net/2009/02">
+   <doc title="REST_POC_ProxyService">RestService</doc>
+   <grammars>
+      <xsd:schema>
+            <xsd:include schemaLocation="CreateUserSchema.xsd"/>
+        </xsd:schema>
+      <xsd:schema>
+            <xsd:include schemaLocation="Response.xsd"/>
+        </xsd:schema>
+   </grammars>
+   <resources>
+      <resource path="/REST_POC_ProxyService">
+         <method name="POST" soa:wsdlOperation="Create">
+            <doc title="POST Create">Will create user</doc>
+            <request>
+               <ns0:representation mediaType="application/xml" element="CreateUserRequest" xmlns="" xmlns:ns0="http://wadl.dev.java.net/2009/02"/>
+            </request>
+            <response status="200">
+               <ns0:representation mediaType="application/xml" element="CreateUserResponse" xmlns="" xmlns:ns0="http://wadl.dev.java.net/2009/02"/>
+            </response>
+         </method>
+      </resource>
+   </resources>
+</application>
